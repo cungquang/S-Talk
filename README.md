@@ -1,35 +1,43 @@
-# Code
-******************************************************************************************************************
-#### README FOR CHAT APPLICATION
+# S-TALK
 ******************************************************************************************************************
 
------------------------------------------- Descripton of s-talk ----------------------------------------------
+## Project Information
 
-This program contains 6 files - zipped in the folder `s-talk`:
+- **Genre:** Chat Application
+- **Language:** C
+
+## Project Description
+
+The S-TALK project was developed for educational purposes, aiming to explore socket programming in C. The primary communication method utilized is UDP (User Datagram Protocol). The focus of the project is to create a simple chat application allowing two users to communicate over the internet.
+
+- **Purpose:** Educational purpose
+- **Target Audience:** Not Applicable
+- **Hosting:** Local machine
+- **Tech Stack:**
+  - C
+
+## Instruction for Makefile
+
+This program consists of 6 files zipped in the folder `s-talk`:
+
 - `s-talk.c`
 - `transmit.c`
 - `transmit.h`
 - `list.h`
-- `list.o` (from the instructor)
+- `list.o` (provided by the instructor)
 - `makefile`
 
----------------------------------------- Instruction for makefile --------------------------------------------
-
+**Commands for Makefile:**
 - `make all`: Compile all the files for general use.
-- `make demo`: Run s-talk with the following parameters:
+- `make demo`: Run S-TALK with the following parameters:
   - Local PORT: 6060
   - Remote machine name: localhost
   - Remote PORT: 6061
 - `make valgrind`: Run in valgrind mode to check for memory leaks.
-- `make clean`: Clean executable files of the s-talk program.
+- `make clean`: Clean executable files of the S-TALK program.
 
----------------------------------------- Major Problems of s-talk -------------------------------------------
+## Potential Issues of S-TALK
 
-**Memory leaks problem:**
-- S-talk still retains one allocation memory that cannot be freed.
+### Closing S-TALK Problem
 
-**Closing s-talk problem:**
-- S-talk fails to terminate due to invalid access to `free()`; it tries to free an empty memory.
-
-##############################################################################################################
-##############################################################################################################
+S-TALK may fail to terminate due to invalid access to `free()`, attempting to free unallocated memory.
